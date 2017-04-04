@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+//        displayForTeamA(scoreTeamA);
+//        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onePointTeamB(View view) {
         scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
 
